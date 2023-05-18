@@ -1,0 +1,98 @@
+//.P-typography-parent {
+//  width: calc(100% - 260px);
+//  height: 100%;
+//}
+
+.P-typography-child {
+  width: 100%;
+}
+
+.P-typography-info{
+  width: 100%;
+  margin-top: 30px;
+
+}
+
+
+
+
+
+//
+.P-typography-a {
+  font-size: 22px;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  color: #333;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.P-typography-b {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  color: #9a9a9a;
+  margin-top: 5px;
+}
+
+
+// header 1,2,3,4,5,6
+
+.P-header-title {
+  margin-top: 30px;
+  width: 70%;
+
+  & li:nth-child(odd) {
+    font-family: roboto, helvetica neue, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 13px;
+    color: #9a9a9a;
+  }
+
+  & div {
+    margin: 20px 0;
+  }
+
+  & li:nth-child(even) {
+    font-weight: 300;
+    margin-left: 40px;
+  }
+}
+
+
+// paragraph
+
+.P-typography-paragraph-content {
+  margin: 30px 0;
+}
+
+.P-typography-paragraph {
+  color: #9a9a9a;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 13px;
+  margin-right: 40px;
+}
+
+.P-typography-paragraph-line-a {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  font-weight: 400;
+
+}
+
+.P-typography-paragraph-line-b {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  font-weight: 400;
+
+  margin-top: 30px;
+}
+
+// Quote
+
+.P-quote {
+
+}

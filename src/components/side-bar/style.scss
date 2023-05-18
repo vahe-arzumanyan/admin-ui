@@ -1,0 +1,68 @@
+.P-side-bar {
+  width: 260px;
+  height: 100vh;
+  background-color: #9368e9;
+  opacity: 0.8;
+  position: fixed;
+}
+
+.P-side-bar-logo {
+  font-size: 18px;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  align-items: center;
+  height: 61px;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.P-side-bar-title {
+  margin: 30px 0;
+
+  a {
+    line-height: 31px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  ul li a {
+    width: 230px;
+    height: 50px;
+    padding: 10px;
+    opacity: 1;
+
+  }
+}
+
+.P-side-bar-title a:hover {
+  background: rgba(255, 255, 255, .23);
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// icon svg
+
+.G-icon-svg{
+  color: white;
+  font-size: 24px;
+  margin: 0 7px;
+}
+// #777 black
+// #2ca8ff azure
+// #18ce0f green
+// #f96332 orange
+// #ff3636 red
+// #9368e9 purple

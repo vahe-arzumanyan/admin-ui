@@ -1,0 +1,188 @@
+.P-user-profile-content {
+  width: calc(100vw - 260px);
+  height: 100%;
+}
+
+.P-user-profile {
+  width: 100%;
+  margin-top: 30px;
+
+  & input {
+    margin: 10px 0 0;
+  }
+}
+
+.P-edit-profile-title {
+  font-size: 22px;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  margin: 25px;
+}
+
+// custom / label
+
+.P-user-form label {
+  font-size: 12px;
+  font-family: roboto, helvetica neue, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #a8a8a8;
+}
+
+
+.P-user-input {
+  width: 65%;
+  height: 600px;
+  border: 1px solid #a8a8a8;
+  margin: 0 15px 0 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.P-user-content {
+  width: 30%;
+  height: 400px;
+  border: 1px solid #a8a8a8;
+  margin: 0 30px 0 15px;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+// line a / company / username / email address
+
+.P-input-line-a {
+  margin: 10px;
+}
+
+.P-input-company-disabled input {
+  width: 320px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+
+  & {
+    padding-left: 5px;
+  }
+}
+
+.P-input-user-name {
+  margin: 0 10px;
+
+  & input {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #a8a8a8;
+    border-radius: 2px;
+    color: #a8a8a8;
+    padding-left: 5px;
+  }
+}
+
+.P-input-email input {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+// input ******** first name / last name ********
+
+.P-input-first-last-name {
+  margin: 35px 10px;
+}
+
+.P-input-first-name input {
+  width: 350px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+.P-input-last-name input {
+  width: 350px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+// address
+
+.P-input-address input {
+  width: 790px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+// city / country / postal code
+.P-input-city input {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+.P-input-country input {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+.P-input-postal-code input {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 2px;
+  color: #a8a8a8;
+  padding-left: 5px;
+}
+
+// about me
+
+.P-input-about-me {
+  margin: 0 10px;
+
+
+
+  & textarea {
+    max-width: 790px;
+    width: 100%;
+    max-height: 40px;
+    height: 100%;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+    color: #a8a8a8;
+    padding-left: 5px;
+  }
+
+  & label {
+    margin: 10px 0;
+  }
+}
+
+// button
+
+.P-update-profile {
+  width: 137px;
+  height: 40px;
+  border-radius: 5px;
+  transition: 0.3s;
+  background-color: #1dc7ea;
+  color: white;
+}
+
+.P-update-profile:hover {
+  background-color: #49d7f3;
+}
