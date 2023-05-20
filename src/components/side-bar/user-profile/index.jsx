@@ -28,7 +28,7 @@ const UserProfile = () => {
             userSurname: 'Surname',
             userNickName: 'NickName',
             userDescription: 'Hello i am React Js Developer ',
-            alt:'image'
+            alt: 'image'
         }
     ])
 
@@ -42,28 +42,31 @@ const UserProfile = () => {
     }
 
     return <>
-            <NavBar name='User Profile'/>
-            <div className='G-center' style={{width: '100%'}}>
-                <div className='P-user-profile G-justify-center G-justify-between'>
-                    <div className='P-user-input'>
+        <NavBar name='User Profile'/>
+        <div className='G-flex' style={{width: '100%'}}>
+            <div className='P-user-profile G-flex G-justify-between'>
+                {/* input content */}
+                <div className='P-user-input-content G-center'>
+                    <div style={{padding:'20px'}}>
                         <p className='P-edit-profile-title'>Edit Profile</p>
-                        <form className='P-user-form'>
+                        <form className='P-user-form G-flex-column G-align-center G-justify-between'>
 
                             {/* line a / company / username / email address */}
-                            <div className='G-justify-between P-input-line-a'>
-                                <div className='G-flex-column P-input-company-disabled'>
+                            <div className=' G-justify-between' style={{width: '100%'}}>
+                                <div className='G-flex-column'>
                                     <label>COMPANY (DISABLED)</label>
-                                    <input type='text'
-                                           placeholder='Creative Code Inc'
-                                           disabled={true}
-                                           name='company'
-                                           value={input.company}
-                                           onChange={handleChange}
-                                    />
+                                    <div className='P-input-company-disabled G-align-center'>
+                                        <input type='text'
+                                               placeholder='Creative Code Inc'
+                                               disabled={true}
+                                               name='company'
+                                               value={input.company}
+                                        />
+                                    </div>
                                 </div>
-                                <div className='G-flex'>
-                                    <div className=' G-flex-column P-input-user-name'>
-                                        <label>USERNAME</label>
+                                <div className=' G-flex-column '>
+                                    <label>USERNAME</label>
+                                    <div className='P-input-user-name'>
                                         <input
                                             type='text'
                                             placeholder='Username'
@@ -72,8 +75,11 @@ const UserProfile = () => {
                                             name='userName'
                                         />
                                     </div>
-                                    <div className='G-flex-column P-input-email'>
-                                        <label>EMAIL ADDRESS</label>
+
+                                </div>
+                                <div className='G-flex-column'>
+                                    <label>EMAIL ADDRESS</label>
+                                    <div className='P-input-email'>
                                         <input
                                             type='text'
                                             placeholder='Email'
@@ -83,11 +89,12 @@ const UserProfile = () => {
                                         />
                                     </div>
                                 </div>
+
                             </div>
 
                             {/* first name / last name */}
-                            <div className='P-input-first-last-name G-justify-between'>
-                                <div className='P-input-first-name'>
+                            <div className='P-input-first-last-name G-justify-between' style={{width: '100%'}}>
+                                <div className='G-flex-column'>
                                     <label>FIRST NAME</label>
                                     <input
                                         type='text'
@@ -97,7 +104,7 @@ const UserProfile = () => {
                                         name='firstName'
                                     />
                                 </div>
-                                <div className='P-input-last-name'>
+                                <div className='G-flex-column'>
                                     <label>LAST NAME</label>
                                     <input
                                         type='text'
@@ -110,7 +117,7 @@ const UserProfile = () => {
                             </div>
 
                             {/* address */}
-                            <div className='P-input-address G-justify-center'>
+                            <div className='P-input-address'>
                                 <div className='G-flex-column'>
                                     <label>ADDRESS</label>
                                     <input
@@ -124,7 +131,7 @@ const UserProfile = () => {
                             </div>
 
                             {/* city / country / postal code */}
-                            <div className='G-justify-between' style={{margin: '20px 10px'}}>
+                            <div className='G-flex  G-justify-between' style={{width: '100%'}}>
                                 <div className='P-input-city'>
                                     <div className='G-flex-column'>
                                         <label>CITY</label>
@@ -168,13 +175,12 @@ const UserProfile = () => {
                                 <div className='G-flex-column '>
                                     <label>POSTAL CODE</label>
                                     <textarea
-                                        type='text'
                                         placeholder='Here can be your description'
                                         value={input.aboutMe}
                                         onChange={handleChange}
                                         name='country'
-                                        rows="5"
-                                        cols="50"
+                                        rows="3"
+                                        cols="87"
                                         maxlength="200"
                                     />
                                 </div>
@@ -184,15 +190,16 @@ const UserProfile = () => {
                             <button onClick={handleUpdateProfile} className='P-update-profile'>Update Profile</button>
                         </div>
                     </div>
-                    <div className='P-user-content'>
-                            {userInfo.length ? userInfo.map((item, index) => {
-                                return <UserInfo item={item} key={index}/>
+                </div>
+                <div className='P-user-content'>
+                    {userInfo.length ? userInfo.map((item, index) => {
+                        return <UserInfo item={item} key={index}/>
 
-                            }) : null}
-                    </div>
+                    }) : null}
                 </div>
             </div>
-        </>
+        </div>
+    </>
 
 };
 
