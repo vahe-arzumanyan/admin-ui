@@ -47,7 +47,7 @@ const UserProfile = () => {
             <div className='P-user-profile G-flex G-justify-between'>
                 {/* input content */}
                 <div className='P-user-input-content G-center'>
-                    <div style={{padding:'20px'}}>
+                    <div style={{padding: '20px'}}>
                         <p className='P-edit-profile-title'>Edit Profile</p>
                         <form className='P-user-form G-flex-column G-align-center G-justify-between'>
 
@@ -194,7 +194,6 @@ const UserProfile = () => {
                 <div className='P-user-content'>
                     {userInfo.length ? userInfo.map((item, index) => {
                         return <UserInfo item={item} key={index}/>
-
                     }) : null}
                 </div>
             </div>

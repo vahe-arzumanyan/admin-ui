@@ -1,0 +1,17 @@
+.P-icon-list-box{
+  width: 100%;
+}
+.P-icon-item span {
+  font-size: 28px;
+}
+
+.P-icon-border {
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
