@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import SideBar from "../index";
-import NavBar from "../../nav-bar";
+import NavBar from "../../../nav-bar";
 
 const Notifications = () => {
     return (

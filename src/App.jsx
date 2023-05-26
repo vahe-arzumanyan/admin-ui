@@ -10,7 +10,10 @@ function App() {
             <SideBar/>
             <div className='P-routing-relative'>
                 <RoutingHome/>
-                    <Setting/>
+                <div style={{width:'1005', height:'100%'}} className='G-justify-end'>
+                    {/*<Setting/>*/}
+                </div>
+
             </div>
         </div>
 

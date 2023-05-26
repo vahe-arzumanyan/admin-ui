@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './style.scss';
-import NavBar from "../../nav-bar";
+import NavBar from "../../../nav-bar";
 import UserInfo from "./user-info";
-import profileBackgroundImage from '../../../assets/image/profileBackgroundImage.jpg';
-import profileUserImage from '../../../assets/image/profileUserImage.jpg';
+import profileBackgroundImage from '../../../../assets/image/profileBackgroundImage.jpg';
+import profileUserImage from '../../../../assets/image/profileUserImage.jpg';
+
 
 const UserProfile = () => {
 
