@@ -2,7 +2,7 @@ import React from "react";
 import './App.scss';
 import SideBar from "./components/side-bar";
 import RoutingHome from "./components/routing";
-import Setting from "./components/setting";
+import Setting from "./components/setting/index";
 
 function App() {
     return <div className='G-container-zero'>
@@ -10,8 +10,8 @@ function App() {
             <SideBar/>
             <div className='P-routing-relative'>
                 <RoutingHome/>
-                <div style={{width:'1005', height:'100%'}} className='G-justify-end'>
-                    {/*<Setting/>*/}
+                <div style={{width:'100%', height:'100%'}} className='G-justify-end'>
+                    <Setting/>
                 </div>
 
             </div>
@@ -24,5 +24,3 @@ function App() {
 
 export default App;
 
-// git rm -r --cached node_moduless
-//hello
