@@ -17,8 +17,3 @@ const [route] = useRoutingWareHouse();
 };
 
 export default RoutingHome;
-
-// <Route path={"/*"} element={<Dashboard/>}/>
-// {routes.map(route => (
-//     <Route path={route.path} element={route.components}/>
-// ))}

@@ -1,24 +1,41 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './style.scss';
 import {useRoutingWareHouse} from "../routing/routing-warehouse";
 import NavLinkLists from "./nav-link";
 import {useSelector} from "react-redux";
-import testImg from '../../assets/image/images.jpg'
-// import { useSetting} from "../setting/useSetting/index";
+import defaultImg from '../../assets/image/images.jpg'
 
 const SideBar = () => {
 
     const [route] = useRoutingWareHouse();
     const changeColor = useSelector(state => state.PluginStyle.color)
     const createImg = useSelector(state => state.PluginStyle.img)
+    console.log(createImg, "sa e")
+
+const bkImage = useMemo(()=>{
+    if(createImg === null){
+        return defaultImg
+    }
+    if(!createImg.img){
+        return createImg.img
+    }
+    if(!createImg.img){
+        return ''
+    }
+}, [createImg])
+
+
+
 
     return <div className='P-side-bar' style={{backgroundColor: !changeColor ? "#9368e9" : changeColor}}>
 
-        {/*<div style={{backgroundImage: `url("${testImg}")`}} className='G-image-cover P-i'></div>*/}
+
 
         <h1 className='P-side-bar-logo'>CREATIVE TIM</h1>
 
-        <div className='G-flex-column G-align-center' style={{top: '-80px'}}>
+        {/*<div style={{backgroundImage: `url(${bkImage})`}} className='G-image-cover P-side-bar-bkImg'>SAD</div>*/}
+
+        <div className='G-flex-column G-align-center' style={{marginTop: '100px'}}>
             {route.map(route => {
                 return <NavLinkLists path={route.path} icon={route.icon} title={route.title}/>
             })}
@@ -26,5 +43,5 @@ const SideBar = () => {
 
     </div>
 }
-    export default SideBar;
+export default SideBar;
 

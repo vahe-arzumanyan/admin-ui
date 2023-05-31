@@ -11,6 +11,7 @@ const PluginStyle = createSlice ({
     reducers:{
         createImg(state, action){
             state.img = action.payload
+            console.log(initialState.img)
         },
 
         createColor(state, action){

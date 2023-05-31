@@ -15,10 +15,10 @@ export const useSetting = () => {
     ]
 
     const pluginImg = [
-        {img: pluginImg1, bgImg: '{{backgroundImage: `url(${item.img})`}}', id: 1},
-        {img: pluginImg2, bgImg: '{{backgroundImage: `url(${item.img})`}}', id: 2},
-        {img: pluginImg3, bgImg: '{{backgroundImage: `url(${item.img})`}}', id: 3},
-        {img: pluginImg4, bgImg: '{{backgroundImage: `url(${item.img})`}}', id: 4}
+        {img: pluginImg1, id: 1},
+        {img: pluginImg2, id: 2},
+        {img: pluginImg3, id: 3},
+        {img: pluginImg4, id: 4}
     ]
     return [pluginColor, pluginImg]
 }
