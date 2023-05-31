@@ -9,9 +9,9 @@ export const useSetting = () => {
         {color: 'gray', id: 1},
         {color: 'blue', id: 2},
         {color: 'green', id: 3},
-        {color: 'yellow', id: 4},
+        {color: 'brown', id: 4},
         {color: 'red', id: 5},
-        {color: 'magenta', id: 6}
+        {color: 'darkCyan', id: 6}
     ]
 
     const pluginImg = [

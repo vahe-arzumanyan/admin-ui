@@ -13,7 +13,7 @@ const PluginStyle = () => {
 
 
 
-    // function
+    // function color / image
 
     const changeColor = (color) => {
         dispatch(createColor(color))

@@ -6,12 +6,11 @@ const initialState = {
 }
 
 const PluginStyle = createSlice ({
-    name:'changeObject',
+    name:'img',
     initialState,
     reducers:{
         createImg(state, action){
             state.img = action.payload
-            console.log(initialState.img)
         },
 
         createColor(state, action){
