@@ -7,7 +7,10 @@ const Dashboard = () => {
 
     return <div className='P-dashboard'>
         <NavBar name='Dashboard'/>
-
+<div className="wrapper">
+    <div className="wrp-inner"></div>
+    <div className="wrp-inner"></div>
+</div>
     </div>
 
 };

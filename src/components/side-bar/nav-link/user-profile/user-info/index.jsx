@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.scss';
 
+
 const UserInfo = ({item}) => {
-    return <div className='G-flex-column G-center G-justify-between' style={{height:'100%'}}>
+    return <div className='G-flex-column G-center G-justify-between' >
         <div style={{width:'100%'}} className='G-justify-center'>
-            <div style={{backgroundImage:`url(${item.profileBackgroundImage})`}} className='G-image-cover P-bkImage'></div>
+            <div style={{backgroundImage:`url(${item.profileBackgroundImage})`}} className='G-image-contain P-bkImage'></div>
             <div style={{backgroundImage:`url(${item.profileUserImage})`}} className='G-image-contain P-user-image'></div>
         </div>
 

@@ -1,8 +1,10 @@
 @import './src/assets/style/index';
 @import 'assets/icomoon/style';
 
-body{
+html, body{
   background-color: #fefcff;
+  width: 100%;
+  height: 100%;
 }
 
 .P-routing-relative{

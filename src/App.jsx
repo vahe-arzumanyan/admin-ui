@@ -8,9 +8,10 @@ function App() {
     return <div className='G-container-zero'>
         <div className='G-flex'>
             <SideBar/>
+
             <div className='P-routing-relative'>
                 <RoutingHome/>
-                <div style={{width:'100%', height:'100%'}} className='G-justify-end'>
+                <div className='G-justify-end P-'>
                     <Setting/>
                 </div>
 

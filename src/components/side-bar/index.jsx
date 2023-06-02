@@ -32,7 +32,7 @@ const SideBar = () => {
             <h1 className='P-side-bar-logo'>CREATIVE TIM</h1>
 
 
-            <div className='G-flex-column G-align-center' style={{marginTop: '100px'}}>
+            <div className='G-flex-column G-align-center' style={{marginTop: '50px'}}>
                 {route.map(route => {
                     return <NavLinkLists path={route.path} icon={route.icon} title={route.title}/>
                 })}
