@@ -6,14 +6,14 @@ const UserInfo = ({item}) => {
     return <div className='P-about-user G-flex-column G-center'>
         <div style={{marginBottom:'50px'}} className='G-center'>
             <div style={{backgroundImage: `url('${item.profileBackgroundImage}')`}}
-                 className='G-image-cover G-c P-bkImage'>
+                 className='G-image-cover P-bkImage'>
                 <div style={{backgroundImage: `url('${item.profileUserImage}')`}}
                      className='G-image-cover P-user-image'></div>
             </div>
 
         </div>
 
-        <div className='G-flex-column'>
+        <div className='G-flex-column' style={{marginTop:'30px'}}>
             <div className='G-flex-column G-align-center G-justify-end P-user-info'>
                 <p className='P-user-name'>{item.userName} {item.userSurname}</p>
                 <p className='P-user-nick-name'>{item.userNickName}</p>
