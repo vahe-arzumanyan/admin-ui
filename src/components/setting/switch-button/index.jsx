@@ -1,15 +1,13 @@
 import React from 'react';
 import './stytle.scss';
 
-const SwtichButton = () => {
+const SwitchButton = ({onChange, value }) => {
     return <div>
         <label className="switch">
-            <input type="checkbox" />
-                <span className="slider round"></span>
-
+            <input type="checkbox" value={value} onChange={onChange}/>
+                <span className="slider round"/>
         </label>
     </div>
-
 };
 
-export default SwtichButton;
+export default SwitchButton;

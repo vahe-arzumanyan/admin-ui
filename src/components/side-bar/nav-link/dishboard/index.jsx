@@ -12,8 +12,8 @@ const Dashboard = () => {
 {/*    <div className="wrp-inner"></div>*/}
 {/*    <div className="wrp-inner"></div>*/}
 {/*</div>*/}
-        <div style={{backgroundImage: `url(${defaultImg})`}} className='aaa '> </div>
 
+        <div style={{backgroundImage: `url('${defaultImg}')`}} className='G-image-contain P-d-img'>ad</div>
 
     </div>
 

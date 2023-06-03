@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './style.scss';
 import {useSetting} from "../useSetting";
-import SwtichButton from "../switch-button";
+import SwitchButton from "../switch-button";
 import {useDispatch} from "react-redux";
-import {createImg, createColor} from "../../../store/reducers/index";
+import {createImg, createColor, setIsImage} from "../../../store/reducers/index";
 
 
 
@@ -11,9 +11,7 @@ const PluginStyle = () => {
 
     const [pluginColor, pluginImg] = useSetting();
     const dispatch = useDispatch()
-
-
-
+    const [isImageChange, setIsImageChange] = useState(false)
     // function color / image
 
     const changeColor = (color) => {
@@ -24,6 +22,14 @@ const PluginStyle = () => {
         dispatch(createImg((item)))
     }
 
+    const handleChangeIsImage = (e)=>{
+        setIsImageChange(!isImageChange)
+    }
+
+    useEffect(()=>{
+        dispatch(setIsImage(isImageChange))
+    },[isImageChange])
+
 
     return (
         <div className='P-hint-box'>
@@ -31,7 +37,7 @@ const PluginStyle = () => {
                 <p style={{margin:'3px 0'}}>SIDEBAR STYLE</p>
                 <div className='G-justify-between'>
                     <p style={{color: 'black'}}>background Image</p>
-                    <SwtichButton/>
+                    <SwitchButton value={isImageChange} onChange={handleChangeIsImage}/>
                 </div>
                 <div>
                     <div className='G-justify-between' style={{margin:'10px 0'}}>

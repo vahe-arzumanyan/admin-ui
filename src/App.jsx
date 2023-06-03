@@ -8,17 +8,13 @@ function App() {
     return <div className='G-container-zero'>
         <div className='G-flex'>
             <SideBar/>
-
             <div className='P-routing-relative'>
                 <RoutingHome/>
                 <div className='G-justify-end P-'>
                     <Setting/>
                 </div>
-
             </div>
         </div>
-
-
     </div>
 }
 

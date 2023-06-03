@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     img:null,
-    color:''
+    color:'',
+    isImage: false
 }
 
 const PluginStyle = createSlice ({
@@ -16,9 +17,12 @@ const PluginStyle = createSlice ({
         createColor(state, action){
             state.color = action.payload
             console.log(action.payload)
+        },
+        setIsImage(state, actions){
+         state.isImage = actions.payload
         }
     }
 })
 
-export const {createImg, createColor} = PluginStyle.actions
+export const {createImg, createColor, setIsImage} = PluginStyle.actions
 export default PluginStyle.reducer
