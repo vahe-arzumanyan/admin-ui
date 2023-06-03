@@ -1,10 +1,10 @@
-import Dashboard from "../components/side-bar/nav-link/dishboard";
-import UserProfile from "../components/side-bar/nav-link/user-profile";
-import TableList from "../components/side-bar/nav-link/table-list";
-import Typography from "../components/side-bar/nav-link/typography";
-import Icons from "../components/side-bar/nav-link/icons";
-import Maps from "../components/side-bar/nav-link/maps";
-import Notifications from "../components/side-bar/nav-link/notifications";
+import Dashboard from "../pages/dishboard";
+import UserProfile from "../pages/user-profile";
+import TableList from "../pages/table-list";
+import Typography from "../pages/typography";
+import Icons from "../pages/icons";
+import Maps from "../pages/maps";
+import Notifications from "../pages/notifications";
 
 export const RouterNames = {
     DASHBOARD: "/Dashboard",

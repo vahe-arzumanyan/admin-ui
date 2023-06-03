@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './style.scss';
-import NavBar from "../../../nav-bar";
-import UserInfo from "./user-info";
-import profileBackgroundImage from '../../../../assets/image/profileBackgroundImage.jpg';
-import profileUserImage from '../../../../assets/image/profileUserImage.jpg';
+import NavBar from "../../components/nav-bar";
+import UserInfo from "./user_info";
+import profileBackgroundImage from '../../assets/image/profileBackgroundImage.jpg';
+import profileUserImage from '../../assets/image/profileUserImage.jpg';
 
 
 const UserProfile = () => {
@@ -60,7 +60,8 @@ const UserProfile = () => {
 
                             {/*line a / company / username / email address*/}
 
-                            <div className='G-justify-between P-form-media' style={{width: '100%',height:'100%', marginBottom: '10px'}}>
+                            <div className='G-justify-between P-form-media'
+                                 style={{width: '100%', height: '100%', marginBottom: '10px'}}>
 
                                 <div className='P-input-company-disabled G-flex-column'>
                                     <label>COMPANY (DISABLED)</label>
@@ -151,38 +152,38 @@ const UserProfile = () => {
                                         name='city'/>
                                 </div>
                                 <div className='P-input-country G-flex-column'>
-                                        <label>COUNTRY</label>
-                                        <input
-                                            type='text'
-                                            placeholder='Country'
-                                            value={input.country}
-                                            onChange={handleChange}
-                                            name='country'
-                                        />
+                                    <label>COUNTRY</label>
+                                    <input
+                                        type='text'
+                                        placeholder='Country'
+                                        value={input.country}
+                                        onChange={handleChange}
+                                        name='country'
+                                    />
                                 </div>
                                 <div className='P-input-postal-code G-flex-column'>
-                                        <label>POSTAL CODE</label>
-                                        <input
-                                            type='number'
-                                            placeholder='ZIP Code'
-                                            value={input.postalCode}
-                                            onChange={handleChange}
-                                            name='country'
-                                        />
-                                    </div>
+                                    <label>POSTAL CODE</label>
+                                    <input
+                                        type='number'
+                                        placeholder='ZIP Code'
+                                        value={input.postalCode}
+                                        onChange={handleChange}
+                                        name='country'
+                                    />
+                                </div>
                             </div>
 
                             {/* about me */}
                             <div className='P-input-about-me G-flex-column'>
-                                    <label>POSTAL CODE</label>
-                                    <textarea
-                                        placeholder='Here can be your description'
-                                        value={input.aboutMe}
-                                        onChange={handleChange}
-                                        name='country'
-                                        rows="3"
-                                        cols="87"
-                                        maxlength="200"/>
+                                <label>POSTAL CODE</label>
+                                <textarea
+                                    placeholder='Here can be your description'
+                                    value={input.aboutMe}
+                                    onChange={handleChange}
+                                    name='country'
+                                    rows="3"
+                                    cols="87"
+                                    maxlength="200"/>
                             </div>
                         </form>
 

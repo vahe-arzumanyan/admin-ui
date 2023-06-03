@@ -4,11 +4,11 @@ import './style.scss';
 
 const UserInfo = ({item}) => {
     return <div className='P-about-user G-flex-column G-center'>
-        <div style={{marginBottom:'50px'}} className='G-justify-center'>
-            <div style={{backgroundImage: `url(${item.profileBackgroundImage})`}}
-                 className='G-image-cover G-align-center P-bkImage'>
-                <div style={{backgroundImage: `url(${item.profileUserImage})`}}
-                     className='G-image-contain P-user-image'></div>
+        <div style={{marginBottom:'50px'}} className='G-center'>
+            <div style={{backgroundImage: `url('${item.profileBackgroundImage}')`}}
+                 className='G-image-cover G-c P-bkImage'>
+                <div style={{backgroundImage: `url('${item.profileUserImage}')`}}
+                     className='G-image-cover P-user-image'></div>
             </div>
 
         </div>
@@ -34,10 +34,3 @@ const UserInfo = ({item}) => {
 };
 
 export default UserInfo;
-
-// profileBackgroundImage: 'profileBackgroundImage',
-//     profileUserImage: 'profileUserImage',
-//     userName: 'Name',
-//     userLastName: 'Surname',
-//     userNickName: 'NickName',
-//     userDescription: 'Hello i am Name'

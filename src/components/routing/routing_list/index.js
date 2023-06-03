@@ -1,10 +1,10 @@
-import Dashboard from "../../side-bar/nav-link/dishboard";
-import UserProfile from "../../side-bar/nav-link/user-profile";
-import TableList from "../../side-bar/nav-link/table-list";
-import Typography from "../../side-bar/nav-link/typography";
-import Icons from "../../side-bar/nav-link/icons";
-import Maps from "../../side-bar/nav-link/maps";
-import Notifications from "../../side-bar/nav-link/notifications";
+import Dashboard from "../../../pages/dishboard";
+import UserProfile from "../../../pages/user-profile/index";
+import TableList from "../../../pages/table-list";
+import Typography from "../../../pages/typography/index";
+import Icons from "../../../pages/icons/index";
+import Maps from "../../../pages/maps";
+import Notifications from "../../../pages/notifications";
 
  export const useRoutingWareHouse = () => {
 

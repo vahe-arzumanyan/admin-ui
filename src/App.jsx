@@ -1,7 +1,7 @@
 import React from "react";
 import './App.scss';
 import SideBar from "./components/side-bar";
-import RoutingHome from "./components/routing";
+import RoutingList from "./components/routing";
 import Setting from "./components/setting/index";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <div className='G-flex'>
             <SideBar/>
             <div className='P-routing-relative'>
-                <RoutingHome/>
+                <RoutingList/>
                 <div className='G-justify-end P-'>
                     <Setting/>
                 </div>

@@ -12,7 +12,7 @@ export const useTypography = () => {
             fontFamily: 'Segoe UI" !important',
             lineHeight: '',
             fontWeight: '',
-            id:true + 1
+            id: true + 1
         },
         {
             title: 'header',
@@ -22,7 +22,7 @@ export const useTypography = () => {
             fontFamily: 'Segoe UI" !important',
             lineHeight: '',
             fontWeight: '',
-            id:true + 1
+            id: true + 1
         },
         {
             title: 'header',
@@ -32,7 +32,7 @@ export const useTypography = () => {
             fontFamily: 'Segoe UI" !important',
             lineHeight: '',
             fontWeight: '',
-            id:true + 1
+            id: true + 1
         },
         {
             title: 'header',
@@ -42,7 +42,7 @@ export const useTypography = () => {
             fontFamily: 'Segoe UI" !important',
             lineHeight: '',
             fontWeight: '',
-            id:true
+            id: true
         },
         {
             title: 'header',
@@ -52,7 +52,7 @@ export const useTypography = () => {
             fontFamily: 'Segoe UI" !important',
             lineHeight: '',
             fontWeight: '',
-            id:true
+            id: true
         },
         {
             title: 'header',
@@ -62,7 +62,7 @@ export const useTypography = () => {
             fontFamily: 'Segoe UI" !important',
             lineHeight: '',
             fontWeight: '',
-            id:true
+            id: true
 
         },
 

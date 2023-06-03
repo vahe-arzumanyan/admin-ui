@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import NavBar from "../../../nav-bar";
+import NavBar from "../../components/nav-bar";
 
 const TableList = () => {
     return (

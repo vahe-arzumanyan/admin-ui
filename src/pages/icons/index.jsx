@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './style.scss';
-import NavBar from "../../../nav-bar";
 import IconList from "./icon-list";
+import NavBar from "../../components/nav-bar";
 
 const Icons = () => {
 
@@ -18,7 +18,7 @@ const Icons = () => {
            <div className='P-icon-content-child'>
                <div className='P-icon-title G-flex-column'>
                    <p>100 Awesome Nucleo Icons</p>
-                   <p>Handcrafted by our friends from <span style={{color:'#007bff'}}>NucleoApp</span></p>
+                   <p>Handcrafted by our friends from <span style={{color:'#007bff'}}>Nucleo</span></p>
                </div>
                    {icon.length ? icon.map((item, index) => {
                        return <IconList item={item} key={index}/>

@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.scss';
-import NavBar from "../../../nav-bar";
-import defaultImg from "../../../../assets/image/pluginImg (1).jpg";
+import NavBar from "../../components/nav-bar";
 
 
 const Dashboard = () => {
@@ -13,7 +12,6 @@ const Dashboard = () => {
 {/*    <div className="wrp-inner"></div>*/}
 {/*</div>*/}
 
-        <div style={{backgroundImage: `url('${defaultImg}')`}} className='G-image-contain P-d-img'>ad</div>
 
     </div>
 

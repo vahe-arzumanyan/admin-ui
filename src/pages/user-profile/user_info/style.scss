@@ -1,14 +1,15 @@
-.P-about-user{
+.P-about-user {
   padding: 15px 10px;
   border: 1px solid black;
   border-radius: 5px;
 }
+
 .P-bkImage {
   width: 350px;
   height: 150px;
- display: flex;
-  justify-content: center;
-
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .P-user-image {
@@ -16,9 +17,9 @@
   height: 125px;
   border-radius: 50%;
   border: 5px solid white;
-  line-height: 125px;
-  margin-top: 100px;
-
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .P-user-name {

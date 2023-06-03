@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './style.scss';
-import {useRoutingWareHouse} from "../routing/routing-warehouse";
+import {useRoutingWareHouse} from "../routing/routing_list";
 import NavLinkLists from "./nav-link";
 import {useSelector} from "react-redux";
-import defaultImg from '../../assets/image/pluginImg (1).jpg'
+
 
 const SideBar = () => {
 
@@ -13,17 +13,15 @@ const SideBar = () => {
     const isImage = useSelector(state => state.PluginStyle.isImage)
 
     const [bgImage, setBgImage] = useState('')
-    // console.log(isImage)
-    // console.log(createImg)
+
     useEffect(() => {
         if (createImg) {
             setBgImage(createImg.img)
         }
     }, [createImg])
 
-    console.log(bgImage)
 
-    return <div className={`P-side-bar ${bgImage && isImage ? 'P-bg-color':''} `} style={{
+    return <div className={`P-side-bar ${bgImage && isImage ? 'P-bg-color' : ''} `} style={{
         backgroundColor: !changeColor ? "#9368e9" : changeColor,
         backgroundImage: `url('${bgImage && isImage ? bgImage : ""}')`
     }}>
