@@ -11,10 +11,11 @@ const PluginStyle = createSlice ({
     reducers:{
         createImg(state, action){
             state.img = action.payload
+            console.log(action.payload)
         },
-
         createColor(state, action){
             state.color = action.payload
+            console.log(action.payload)
         }
     }
 })

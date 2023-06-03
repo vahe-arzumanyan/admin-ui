@@ -8,6 +8,7 @@ import {createImg, createColor} from "../../../store/reducers/index";
 
 
 const PluginStyle = () => {
+
     const [pluginColor, pluginImg] = useSetting();
     const dispatch = useDispatch()
 
