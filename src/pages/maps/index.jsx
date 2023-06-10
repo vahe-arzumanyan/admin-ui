@@ -3,11 +3,9 @@ import './style.scss';
 import NavBar from "../maps";
 
 const Maps = () => {
-    return (
-        <div>
+    return <div>
             <NavBar name='Maps'/>
         </div>
-    );
 };
 
 export default Maps;

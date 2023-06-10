@@ -1,9 +1,10 @@
 import React from 'react';
 import './style.scss';
 
-const NotificationButton = ({item, openModal}) => {
+const NotificationButton = ({item, onClick}) => {
+
     return <div className='P-notification-button-name'>
-        <button onClick={openModal}>{item}</button>
+        <button onClick={onClick}>{item}</button>
     </div>
 
 };

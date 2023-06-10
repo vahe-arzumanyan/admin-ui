@@ -1,31 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
+import './style.scss';
 
-const NotificationItems = () => {
-
-    const [modalInfo, setModalInfo] = useState(false)
-    const randomColor = () => {
-        let x = Math.floor(Math.random() * 256)
-        let y = Math.floor(Math.random() * 256)
-        let z = Math.floor(Math.random() * 256)
-        let connectRGB = 'rgb(' + x + ',' + y + ',' + z + ')'
-        return connectRGB
-    }
-
-    const notificationInfo = () => {
-        let notificationList = {
-            title:'notification title',
-            description:'notification description',
-            Close:'X',
-            color:randomColor(),
-            id:Date.now()
-        }
-        setModalInfo(...[modalInfo, notificationList])
-    }
+const NotificationItems = ({item, deleteItem}) => {
 
 
-    return <div>
-
+    return <div className='P-notification-show-content'>
+        <div className='G-justify-between G-align-center P-notification-box' style={{backgroundColor: item.BgColor}}>
+            <div className='G-flex-column'>
+                <p className='P-notification-title'>{item.title}</p>
+                <p className='P-notification-description'>{item.description}</p>
+            </div>
+            <div onClick={() => deleteItem(item.id)} className='P-notification-remove'>{item.close}</div>
         </div>
+
+    </div>
 
 };
 

@@ -1,0 +1,31 @@
+.P-notification-show-content {
+
+}
+
+.P-notification-box {
+  width: 500px;
+  height: 50px;
+  border: 1px solid #7d7d7d;
+  border-radius: 5px;
+  padding: 5px;
+  margin:15px;
+}
+
+.P-notification-title {
+  color: #e0e0e0;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.P-notification-description {
+  color: #e0e0e0;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.P-notification-remove {
+  color:blue;
+  font-family: monospace;
+  font-size: 16px;
+  cursor: pointer;
+}
