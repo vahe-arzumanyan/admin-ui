@@ -5,7 +5,7 @@ const TypographyList = ({title, description, color, fontSize, fontFamily, lineHe
 
     return <div className='G-flex G-align-end ' style={{padding:'25px'}}>
         <div className='G-flex-column G-justify-start' style={{ minWidth:'15%'}}>
-            <p>{title} {id+1}</p>
+            <p>{title} {id}</p>
         </div>
         <div style={{margin:'0 30px 0'}} className='G-flex-column'>
             <p style={{

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import NavBar from "../maps";
+import NavBar from "../../components/nav-bar";
 
 const Maps = () => {
     return <div>

@@ -1,5 +1,24 @@
-.P-nav-bar{
+.P-nav-bar {
   height: 61px;
-  background-color:white;
+  background-color: white;
   border-bottom: 1px solid black;
+
+  & a {
+    font-size: 18px;
+    font-family: Bahnschrift;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 50px;
+    color: #383A3D;
+    line-height: 61px;
+  }
+
+  a:hover {
+    color: #8a9093;
+    height: 61px;
+  }
+
+  p {
+    margin-left: 30px;
+  }
 }

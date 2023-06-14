@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './style.scss';
-import {useRoutingWareHouse} from "../routing/routing_list";
 import NavLinkLists from "./nav-link";
 import {useSelector} from "react-redux";
+import {AdminNavBarList, privateRouters} from "../../routers/router";
 
 
 const SideBar = () => {
 
-    const [route] = useRoutingWareHouse();
     const createImg = useSelector(state => state.PluginStyle.img)
     const changeColor = useSelector(state => state.PluginStyle.color)
     const isImage = useSelector(state => state.PluginStyle.isImage)
@@ -26,8 +25,8 @@ const SideBar = () => {
         backgroundImage: `url('${bgImage && isImage ? bgImage : ""}')`
     }}>
         <h1 className='P-side-bar-logo'>CREATIVE TIM</h1>
-        <div className='G-flex-column G-align-center P-nav-bar-list' style={{marginTop: '50px'}}>
-            {route.map(route => {
+        <div className='G-flex-column G-align-center P-nav-bar-list'>
+            {AdminNavBarList.map(route => {
                 return <NavLinkLists path={route.path} icon={route.icon} title={route.title}/>
             })}
         </div>

@@ -96,6 +96,7 @@ const Notifications = () => {
         setCreateInfo(newList)
     }
 
+
     return <>
         <NavBar name='Notification'/>
         <div className='P-notification'>
@@ -110,7 +111,6 @@ const Notifications = () => {
                             key={index}
                             item={item}
                             deleteItem={handleRemove}
-
                         />
                     }) : null}
                 </div>
@@ -123,9 +123,9 @@ const Notifications = () => {
                     {button.map((item, index) => {
                         return <NotificationButton
                             key={index}
-                            item={item.buttonName}
-                            itemId={item.id}
+                            item={item}
                             onClick={handleClick}
+
                         />
                     })}
                 </div>

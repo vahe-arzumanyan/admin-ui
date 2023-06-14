@@ -11,7 +11,7 @@ const NavLinkLists = ({path, icon, title}) => {
                 <li>
                     <NavLink to={path} className='G-flex'>
                         <span className={`G-icon-svg ${icon}`}></span>
-                        <p>{title}</p>
+                        <p >{title}</p>
                     </NavLink>
                 </li>
             </ul>
