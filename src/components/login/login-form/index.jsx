@@ -22,7 +22,7 @@ const LoginForm = ({registerLoginModal}) => {
 
 
     const handleChange = (e) => {
-        // e.preventDefault()
+        e.preventDefault()
         setLoginUser({...loginUser, [e.target.name]: e.target.value})
         setLoginUserErrorText({...loginUserErrorText, [e.target.name]: ''})
     }
@@ -95,7 +95,7 @@ const LoginForm = ({registerLoginModal}) => {
                 name='email'
                 type='text'
                 value={loginUser.email}
-                errorText={loginUserErrorText.emailErrorText}
+                errorText={loginUserErrorText.errorEmail}
             />
 
             <CustomInput
@@ -103,7 +103,7 @@ const LoginForm = ({registerLoginModal}) => {
                 name='password'
                 type='password'
                 value={loginUser.password}
-                errorText={loginUserErrorText.passwordErrorText}
+                errorText={loginUserErrorText.errorPassword}
             />
             <div className='P-custom-button'>
                 <button onClick={handleClick}>finish</button>
