@@ -3,7 +3,7 @@ import './style.scss';
 import {useSetting} from "../useSetting";
 import SwitchButton from "../switch-button";
 import {useDispatch} from "react-redux";
-import {createImg, createColor, setIsImage} from "../../../store/reducers/index";
+import {createImg, createColor, setIsImage} from "../../../store/reducers/plugin";
 
 
 const PluginStyle = () => {

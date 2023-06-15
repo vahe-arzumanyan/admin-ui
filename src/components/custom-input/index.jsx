@@ -15,7 +15,7 @@ const CustomInput = ({onChange, value, name, type, errorText}) => {
                    name={name}
                    type={type}
             />
-            <p style={errorText ? {color: "red"} : null}>{errorText}</p>
+            <p className={errorText ? "stringError" : ''}>{errorText}</p>
         </div>
     </form>
 

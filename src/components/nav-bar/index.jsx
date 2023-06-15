@@ -13,7 +13,7 @@ const NavBar = ({name, useRoutingWareHouse}) => {
             <p>{name}</p>
            <div className='P-nav-bar'>
 
-               <NavLink to={RouterNames.LOGIN}>Log in</NavLink>
+               <NavLink to={RouterNames.LOGIN}>Logout</NavLink>
            </div>
         </div>
     );
