@@ -1,7 +1,7 @@
+import React from "react";
 import SideBar from "../side-bar";
 import RoutingList from "../routing";
 import Setting from "../setting";
-import React from "react";
 
 const AdminComponent = ()=>{
 

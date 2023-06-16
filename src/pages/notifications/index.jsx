@@ -87,6 +87,7 @@ const Notifications = () => {
             close: 'x',
             BgColor: randomColor(),
             id: Date.now()
+
         }
         setCreateInfo([...createInfo, notificationList])
     }
@@ -99,7 +100,7 @@ const Notifications = () => {
 
     return <>
         <NavBar name='Notification'/>
-        <div className='P-notification'>
+        <div className='P-notification G-center'>
 
             <div className='P-notification-content G-center'>
 
@@ -125,7 +126,6 @@ const Notifications = () => {
                             key={index}
                             item={item}
                             onClick={handleClick}
-
                         />
                     })}
                 </div>

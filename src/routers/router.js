@@ -6,6 +6,7 @@ import Icons from "../pages/icons";
 import Maps from "../pages/maps";
 import Notifications from "../pages/notifications";
 import LoginRegister from "../components/login";
+import Logout from "../components/logout";
 
 export const RouterNames = {
     DASHBOARD: "/Dashboard",
@@ -16,13 +17,13 @@ export const RouterNames = {
     MAPS: "/Maps",
     NOTIFICATIONS: "/Notifications",
     LOGIN:"/Login",
-    REGISTRATION:"/Registration"
+    LOGOUT:"/Logout"
 }
 
 
 export const publicRouters = [
     {path: RouterNames.LOGIN, element:<LoginRegister />, icon: '', title:'Login'},
-    // {path: RouterNames.REGISTRATION, element:<Registration />, icon: '', title:'Registration'}
+    {path: RouterNames.LOGOUT, element:<Logout />, icon: '', title:'Registration'}
 ]
 
 export const privateRouters = [
