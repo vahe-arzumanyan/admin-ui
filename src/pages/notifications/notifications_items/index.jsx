@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.scss';
 
-const NotificationItems = ({item, deleteItem}) => {
+const NotificationItems = ({item, deleteItem, button}) => {
 
-
+    console.log(button)
     return <div className='P-notification-show-content'>
         <div className='G-justify-between G-align-center P-notification-box' style={{backgroundColor: item.BgColor}}>
             <div className='G-flex-column'>

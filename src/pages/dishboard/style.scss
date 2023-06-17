@@ -1,32 +1,78 @@
-.P-dashboard{
+.chart-container {
   width: 100%;
   height: 100%;
+  background-color: rgba(241, 232, 232, 0.17);
 }
-.wrapper{
+
+.chart-content {
+  width: 90%;
+  max-height: 700px;
+  height: 700px;
+  //border: 1px solid black;
+  margin-top: 30px;
+  padding: 30px;
+
+}
+
+// PIE chart content
+.P-pie-chart {
+  max-width: 400px;
   width: 100%;
-  height: 800px;
-  display: flex;
-}
-.wrp-inner {
-  flex: 1;
-  background-color: black;
-  &:first-child{
-    background-color: red;
-    max-width: 200px;
+  height: 100%;
+  padding: 30px;
+
+  .P-pie-chart-border {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .P-pie-chart-title {
+    font-size: 20px;
+    color: goldenrod;
+    padding: 15px 0;
   }
 }
 
-.aaa{
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  border:1px solid black;
+
+// BAR chart content
+
+.P-bar-chart {
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+
+
+  .P-bar-chart-border {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .P-bar-chart-title {
+    font-size: 20px;
+    color: goldenrod;
+    padding: 15px 0;
+  }
 }
 
-.P-d-img{
-  width: 400px;
-  height: 400px;
+// LINE chart content
+
+.P-line-chart {
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+
+
+  .P-line-chart-border {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .P-line-chart-title {
+    font-size: 20px;
+    color: goldenrod;
+    padding: 15px 0;
+  }
 }
+
+
