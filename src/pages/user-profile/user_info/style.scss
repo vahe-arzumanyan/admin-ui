@@ -1,66 +1,199 @@
-.P-about-user {
-  padding: 15px 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
+// user background image
 
-.P-bkImage {
-  width: 350px;
-  height: 150px;
+.P-choose-img {
   position: relative;
-  top: 0;
-  left: 0;
-}
 
-.P-user-image {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  border: 5px solid white;
-  position: absolute;
-  top: 50%;
-  left: 33%;
-}
+  input[type=file] {
+    display: none;
+    object-fit: cover;
+  }
 
-.P-user-name {
-  font-size: 16px;
-  line-height: 18px;
-  color: #42d0ed;
-}
-
-.P-user-nick-name {
-  font-size: 16px;
-  line-height: 18px;
-  color: black;
-  padding: 5px;
-}
-
-.P-user-description {
-  font-size: 16px;
-  line-height: 18px;
-  color: black;
-  max-width: 300px;
-  max-height: 10px;
-  padding: 0 0 10px 0;
-}
-
-// social icon svg font
-
-.P-user-social-icon {
-  width: 100%;
-  height: 100%;
-  margin: 30px 0;
-
-  span {
-    font-size: 16px;
-    line-height: 18px;
-    color: #636060;
+  label {
+    font-size: 14px;
+    color: brown;
+    font-weight: bold;
     margin: 5px;
+  }
+
+  label:hover {
+    color: #c45f5f;
+    border-bottom: 1px solid #c45f5f;
+    margin: 5px;
+
   }
 }
 
-.P-icons-under-line {
+.P-upload-img {
+  width: 100%;
+  position: relative;
+
+  img:first-child {
+    width: 350px;
+    height: 130px;
+  }
+
+  img:last-child {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 60%);
+
+  }
+}
+
+// user upload image
+
+.P-choose-user-img {
+  input[type=file] {
+    display: none;
+    object-fit: cover;
+  }
+
+  label {
+    font-size: 14px;
+    color: brown;
+    font-weight: bold;
+    margin: 5px;
+  }
+
+  label:hover {
+    color: #c45f5f;
+    border-bottom: 1px solid #c45f5f;
+    margin: 5px;
+
+  }
+}
+
+//.P-choose-userImg {
+//  position: absolute;
+//  width: 120px;
+//  height: 120px;
+//  border-radius: 100%;
+//  left: 50%;
+//  button: 60px;
+//  transform: translate(-50%);
+//}
+
+
+// user profile image
+
+.P-choose-userImg {
+  & img {
+    border: 2px solid #746e6e;
+    border-radius: 50%;
+    max-width: 350px;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+
+//.P-about-user {
+//  padding: 15px;
+//  border-radius: 5px;
+//
+//  & p {
+//    color: black;
+//  }
+//}
+
+//.P-bkImage-content {
+//  max-width: 350px;
+//  width: 100%;
+//  height: 100px;
+//  position: absolute;
+//  z-index: -1;
+//
+//  & .P-bkImage {
+//    width: 100%;
+//    height: 100%;
+//  }
+//}
+
+//.P-user-img-content {
+//  max-width: 125px;
+//  width: 100%;
+//  height: 125px;
+//  border-radius: 50%;
+//  border: 5px solid white;
+//  position: absolute;
+//
+//  & .P-user-img {
+//    width: 100%;
+//    height: 100%;
+//    border-radius: 100%;
+//  }
+//}
+
+// user information
+
+.P-user-info {
   max-width: 300px;
   width: 100%;
-  border-bottom: 1px solid #636060;
+  padding: 15px;
+  margin-top: 50px;
+
+  & p {
+    padding: 3px;
+  }
 }
+
+
+// social icon svg font
+
+//.P-user-social-icon {
+//  width: 100%;
+//  height: 100%;
+//  margin: 30px 0;
+//
+//  span {
+//    font-size: 22px;
+//    line-height: 18px;
+//    color: #636060;
+//    margin: 10px;
+//  }
+//}
+//
+//.P-icons-under-line {
+//  width: 300px;
+//  border-bottom: 1px solid #636060;
+//}
+
+// choose img
+
+//.P-choose-img {
+//  p {
+//    margin: 15px 0;
+//    cursor: pointer;
+//  }
+//
+//  & input[type=file] {
+//    display: none;
+//  }
+//}
+
+//.P-choose-user-bg-img {
+//  max-width: 125px;
+//  width: 100%;
+//  height: 125px;
+//  border-radius: 50%;
+//  border: 5px solid white;
+//
+//}
+
+
+//.P-error-text {
+//  color: #530e07;
+//  font-family: monospace;
+//  font-size: 16px;
+//  padding: 10px;
+//}
+//
+//.jjj {
+//  position: relative;
+//  top: 0;
+//  left: 0;
+//}

@@ -105,7 +105,7 @@ const RegisterForm = ({registerLoginModal}) => {
 
 
     return <div className={`P-register-form ${registerLoginModal ? " P-register-form-hide" : ''} `}>
-        <div className='G-flex-column G-align-center'>
+        <div className='G-flex-column G-align-center G-login-register-input'>
             <CustomInput
                 onChange={handleChange}
                 type='text'

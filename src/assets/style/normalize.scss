@@ -159,6 +159,7 @@ svg {
 img {
   max-width: 100%;
   max-height: 100%;
+  display: block;
 }
 
 html,
@@ -167,7 +168,6 @@ body {
   padding: 0;
   position: relative;
   font-family: "Segoe UI" !important;
-
 }
 
 /* Chrome, Safari, Edge, Opera */

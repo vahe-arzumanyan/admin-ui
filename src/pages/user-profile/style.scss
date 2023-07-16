@@ -1,225 +1,39 @@
-@mixin input-profile {
-  font-size: 14px;
-  padding-left: 5px;
-  height: 35px;
-  color: #a8a8a8;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-input[type=text], input[type=number], select, textarea {
-  //width: 100%;
-  //padding: 12px;
-  //resize: vertical;
-  //border: 1px solid #a8a8a8;
-  //border-radius: 2px;
-}
-
-
-.P-user-profile-content {
+.P-create-user {
   width: 100%;
   height: 100%;
 }
 
-.P-user-profile {
-  width: 100%;
-  height: 100%;
-  margin-top: 30px;
-  padding: 0 30px;
+.P-user-profile label {
+  color: black;
 }
 
-.P-edit-profile-title {
+.P-create-profile-title {
   font-size: 22px;
   font-family: roboto, helvetica neue, Arial, sans-serif;
-  margin: 25px;
-}
-
-// custom / label
-
-.P-user-form label {
-  font-size: 12px;
-  font-family: roboto, helvetica neue, Arial, sans-serif;
-  text-transform: uppercase;
-  color: #a8a8a8;
-  margin: 10px 0;
-}
-
-
-.P-user-input-content {
-  max-width: 800px;
-  width: 100%;
-  height: 600px;
-  border: 1px solid #a8a8a8;
-  background-color: #ffffff;
-  border-radius: 5px;
-}
-
-
-// line a / company / username / email address
-
-.P-input-company-disabled {
-  max-width: 320px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    width: 100%;
-    @include input-profile();
-  }
-
-}
-
-.P-input-user-name {
-  max-width: 200px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    @include input-profile();
-  }
-}
-
-
-.P-input-email {
-  max-width: 200px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    @include input-profile();
-  }
-}
-
-.P-form-media {
-  @media screen and (max-width: 745px) {
-    @include flex-column();
-  }
-}
-
-// input ******** first name / last name ********
-
-.P-input-first-name {
-  max-width: 370px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    @include input-profile();
-  }
-}
-
-.P-input-last-name {
-  max-width: 370px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    @include input-profile();
-  }
-}
-
-// address
-
-.P-input-address {
-  max-width: 780px;
-  width: 100%;
-  padding: 5px;
-
-  input[type=text] {
-    @include input-profile();
-  }
-}
-
-// city / country / postal code
-
-.P-input-city {
-  max-width: 270px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    width: 100%;
-    @include input-profile();
-  }
-}
-
-
-.P-input-country {
-  max-width: 270px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=text] {
-    width: 100%;
-    @include input-profile();
-  }
-}
-
-
-.P-input-postal-code {
-  max-width: 270px;
-  width: 100%;
-  padding: 5px;
-
-  & input[type=number] {
-    width: 100%;
-    @include input-profile();
-  }
-}
-
-
-// about me
-
-.P-input-about-me {
-  margin: 0 10px;
-  max-width: 780px;
-  width: 100%;
-  padding: 5px;
-
-  & textarea {
-    border: 1px solid #a8a8a8;
-    border-radius: 5px;
-    color: #a8a8a8;
-    padding-left: 5px;
-    overflow: auto;
-    resize: vertical;
-  }
-
-  & label {
-    margin: 10px 0;
-  }
-
-}
-
-// button
-
-.P-update-profile {
-  max-width: 137px;
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  transition: 0.3s;
-  background-color: #1dc7ea;
-  color: white;
-}
-
-.P-update-profile:hover {
-  background-color: #49d7f3;
+  margin: 15px;
 }
 
 // user profile
 
+.P-user-profile {
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.P-create-user-content {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 30px;
+}
+
 .P-user-content {
   max-width: 400px;
   width: 100%;
-
-  & textarea {
-    width: 100%;
-    border: 1px solid #a8a8a8;
-    background-color: white;
-    border-radius: 5px;
-  }
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 20px;
+  padding: 15px;
 }
+
+

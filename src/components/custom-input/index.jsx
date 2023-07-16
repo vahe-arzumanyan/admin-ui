@@ -1,23 +1,24 @@
 import React from 'react';
 import './style.scss';
 
-const CustomInput = ({onChange, value, name, type, errorText}) => {
+const CustomInput = ({onChange, value, name, type, errorText, placeholder}) => {
 
     const handleChange = (e) => {
         onChange(e)
     }
 
-    return <form>
-        <div className='P-custom-input-parent G-flex-column'>
-            <label className='P-custom-label'>{name}</label>
+    return <div className='G-input'>
+        <label>
+            {name?<p>{name}</p>:null}
             <input onChange={handleChange}
                    value={value}
+                   placeholder={placeholder}
                    name={name}
                    type={type}
             />
-            <p className={errorText ? "stringError" : ''}>{errorText}</p>
-        </div>
-    </form>
+        </label>
+        <p className={errorText ? "stringError" : ''}>{errorText}</p>
+    </div>
 
 };
 
