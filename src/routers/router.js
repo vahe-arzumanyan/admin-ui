@@ -1,6 +1,6 @@
 import Dashboard from "../pages/dishboard";
 import UserProfile from "../pages/user-profile";
-import TableList from "../pages/table-list";
+import UsersList from "../pages/users-list";
 import Typography from "../pages/typography";
 import Icons from "../pages/icons";
 import Map from "../pages/maps";
@@ -29,7 +29,7 @@ export const publicRouters = [
 export const privateRouters = [
     {path: RouterNames.DASHBOARD, element: <Dashboard/>, icon: 'icon-pie-chart', title:'Dashboard'},
     {path: RouterNames.USER_PROFILE, element: <UserProfile/>, icon: 'icon-user-circle', title:'User Profile'},
-    {path: RouterNames.TABLE_LIST, element: <TableList/>, icon: 'icon-paper-clip', title:'Table List'},
+    {path: RouterNames.TABLE_LIST, element: <UsersList/>, icon: 'icon-paper-clip', title:'Users List'},
     {path: RouterNames.TYPOGRAPHY, element: <Typography/>, icon: 'icon-lowercase', title:'Typography'},
     {path: RouterNames.ICONS, element: <Icons/>, icon: 'icon-delta-icons', title:'Icons'},
     {path: RouterNames.MAPS, element: <Map/>, icon: 'icon-map', title:'Maps'},
@@ -39,7 +39,7 @@ export const privateRouters = [
 export const AdminNavBarList = [
     {path: RouterNames.DASHBOARD, element: <Dashboard/>, icon: 'icon-pie-chart', title:'Dashboard'},
     {path: RouterNames.USER_PROFILE, element: <UserProfile/>, icon: 'icon-user-circle', title:'User Profile'},
-    {path: RouterNames.TABLE_LIST, element: <TableList/>, icon: 'icon-paper-clip', title:'Table List'},
+    {path: RouterNames.TABLE_LIST, element: <UsersList/>, icon: 'icon-paper-clip', title:'Users List'},
     {path: RouterNames.TYPOGRAPHY, element: <Typography/>, icon: 'icon-lowercase', title:'Typography'},
     {path: RouterNames.ICONS, element: <Icons/>, icon: 'icon-delta-icons', title:'Icons'},
     {path: RouterNames.MAPS, element: <Map/>, icon: 'icon-map', title:'Maps'},

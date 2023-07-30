@@ -6,11 +6,9 @@ import {privateRouters, RouterNames} from "../../routers/router";
 const RoutingList = () => {
     return <Routes>
         {privateRouters.map(route => {
-            return <Route path={route.path} element={route.element}
-            />
+            return <Route path={route.path} element={route.element}/>
         })}
-
-        <Route path={'*'} element={<Navigate to={RouterNames.DASHBOARD}/>}/>
+        <Route path={'/*'} element={<Navigate to={RouterNames.DASHBOARD}/>}/>
     </Routes>
 };
 

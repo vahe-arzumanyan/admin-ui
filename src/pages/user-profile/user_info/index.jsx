@@ -1,68 +1,49 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './style.scss';
 
 
-const UserInfo = ({input, chooseUserBgImg, chooseUserImg}) => {
+const UserInfo = ({userInput}) => {
 
 
     return <div className='G-flex-column G-align-center'>
 
-        {/* choose img*/}
 
-       <div className='G-justify-between'>
-           <div className='P-choose-img'>
-               <label>upload background image
-                   <input onChange={chooseUserBgImg} type='file'/>
-               </label>
-           </div>
 
-           <div className='P-choose-user-img'>
-               <label>upload user image
 
-                   <input onChange={chooseUserImg} type='file'/>
-               </label>
-           </div>
-       </div>
+        <div className='P-upload-img G-flex-column G-justify-center'>
+            {(userInput.userBgImg || userInput.userImg) && <div style={{backgroundImage: `url("${userInput.userBgImg}")`}}
+                  className='P-image-main G-image-cover G-flex G-align-end G-justify-center'>
+                {userInput.userImg &&
+                <div style={{backgroundImage: `url("${userInput.userImg}")`}} className='P-image-profile G-image-cover'/>}
+            </div>}
+        </div>
 
-        {/* img */}
+        <div>
+            <div className='G-flex-column  G-align-center P-user-info'>
+                <div className='G-flex'>
+                    <p style={{marginLeft: '5px'}}>{userInput.firstName}</p>
+                    <p>{userInput.lastName}</p>
+                </div>
+                <p>{userInput.age}</p>
+                <p>{userInput.phone}</p>
+                <p>{userInput.email}</p>
+                <p>{userInput.city}</p>
+                <p>{userInput.profession}</p>
+            </div>
 
-        <div className='P-upload-img G-justify-center'>
-            {input.userBgImg && <img src={input.userBgImg} alt="#"/>}
-            {input.userImg && <img src={input.userImg} alt="img"/>}
+            <div className='P-user-social-icon G-flex-column G-align-center'>
+                <div className='P-icons-under-line'></div>
+                <div className='G-flex'>
+                    <span className='icon-facebook-fill'></span>
+                    <span className='icon-twitter-fill'></span>
+                    <span className='icon-google-plus'></span>
+                </div>
+
+            </div>
         </div>
 
 
-
     </div>
-
-
-    {/* user information*/
-    }
-
-    // <div>
-    //     <div className='G-flex-column  G-align-center P-user-info'>
-    //         <div className='G-flex'>
-    //             <p style={{marginLeft: '5px'}}>{input.firstName}</p>
-    //             <p>{input.lastName}</p>
-    //         </div>
-    //         <p>{input.age}</p>
-    //         <p>{input.phone}</p>
-    //         <p>{input.email}</p>
-    //         <p>{input.city}</p>
-    //         <p>{input.profession}</p>
-    //     </div>
-    //
-    //
-    //     {/*<div className='P-user-social-icon G-flex-column G-align-center'>*/}
-    //     {/*    <div className='P-icons-under-line'></div>*/}
-    //     {/*    <div className='G-flex'>*/}
-    //     {/*        <span className='icon-facebook-fill'></span>*/}
-    //     {/*        <span className='icon-twitter-fill'></span>*/}
-    //     {/*        <span className='icon-google-plus'></span>*/}
-    //     {/*    </div>*/}
-    //
-    //     {/*</div>*/}
-    // </div>
 
 
 };

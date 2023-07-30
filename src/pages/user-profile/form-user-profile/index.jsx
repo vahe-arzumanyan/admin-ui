@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import CustomInput from "../../../components/custom-input";
 
-const FormUserProfile = ({onChange, input, inputError}) => {
+const FormUserProfile = ({onChange, userInput, userInputError}) => {
 
     const handleChange = (e) => {
         onChange(e)
@@ -15,8 +15,8 @@ const FormUserProfile = ({onChange, input, inputError}) => {
             onChange={handleChange}
             name='firstName'
             type='text'
-            value={input.firstName}
-            errorText={inputError.errorFirstName}
+            value={userInput.firstName}
+            errorText={userInputError.errorFirstName}
 
         />
 
@@ -25,26 +25,26 @@ const FormUserProfile = ({onChange, input, inputError}) => {
             onChange={handleChange}
             name='lastName'
             type='text'
-            value={input.lastName}
-            errorText={inputError.errorLastName}
+            value={userInput.lastName}
+            errorText={userInputError.errorLastName}
         />
 
         <CustomInput
             onChange={handleChange}
             name='age'
             type='number'
-            value={input.age}
+            value={userInput.age}
             placeholder='age'
-            errorText={inputError.errorAge}
+            errorText={userInputError.errorAge}
         />
 
         <CustomInput
             onChange={handleChange}
             name='email'
             type='text'
-            value={input.email}
+            value={userInput.email}
             placeholder='email'
-            errorText={inputError.errorEmail}
+            errorText={userInputError.errorEmail}
         />
 
         <CustomInput
@@ -52,8 +52,8 @@ const FormUserProfile = ({onChange, input, inputError}) => {
             onChange={handleChange}
             name='city'
             type='text'
-            value={input.city}
-            errorText={inputError.errorCity}
+            value={userInput.city}
+            errorText={userInputError.errorCity}
         />
 
         <CustomInput
@@ -61,10 +61,9 @@ const FormUserProfile = ({onChange, input, inputError}) => {
             onChange={handleChange}
             name='profession'
             type='text'
-            value={input.profession}
-            errorText={inputError.errorProfession}
+            value={userInput.profession}
+            errorText={userInputError.errorProfession}
         />
-
 
     </div>
 

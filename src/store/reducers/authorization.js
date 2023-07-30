@@ -5,7 +5,7 @@ const initialState = {
     userToken: ''
 }
 
-const Authorization = (createSlice({
+const UsersList = (createSlice({
     name: 'authorizationUser',
     initialState,
     reducers: {
@@ -18,6 +18,7 @@ const Authorization = (createSlice({
                 state.authorizationUser = localUser
             }
         },
+
         checkToken(state, action) {
             state.userToken = action.payload
         }
@@ -25,5 +26,5 @@ const Authorization = (createSlice({
     }
 }))
 
-export const {createUsers, checkUsers, checkToken} = Authorization.actions
-export default Authorization.reducer;
+export const {createUsers, checkUsers, checkToken} = UsersList.actions
+export default UsersList.reducer;

@@ -35,11 +35,13 @@ const NavBar = ({name, children}) => {
 
                 {/* ================== logout ================== */}
                 {children}
-                <button onClick={handleLogout} style={{margin:'0 15px'}}>Logout
-                    {logoutModal ? <CustomModal onClose={handleLogout}>
-                        <Logout onClose={handleLogout} logoutUser={logoutUser}/>
-                    </CustomModal> : null}
-                </button>
+                <div style={{width:'350px'}}>
+                    <button onClick={handleLogout}>Logout
+                        {logoutModal ? <CustomModal onClose={handleLogout}>
+                            <Logout onClose={handleLogout} logoutUser={logoutUser}/>
+                        </CustomModal> : null}
+                    </button>
+                </div>
 
             </div>
         </div>

@@ -46,7 +46,7 @@ const RegisterForm = ({registerLoginModal}) => {
         const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
         if (!registerUser.firstName.trim().length) {
-            errorString.errorFirstName = 'fill in the required first first name'
+            errorString.errorFirstName = 'fill in the required first name'
             isValidate = false
         }
         if (!registerUser.lastName.trim().length) {
