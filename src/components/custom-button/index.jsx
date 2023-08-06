@@ -4,6 +4,7 @@ import './style.scss';
 
 const CustomButton = ({onClick, name, infoClassName}) => {
 
+
     if (infoClassName === 'addUser') {
         infoClassName = 'add'
     }

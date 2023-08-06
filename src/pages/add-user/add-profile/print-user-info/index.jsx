@@ -8,13 +8,13 @@ const UserInfo = ({userInput}) => {
     return <div className='G-flex-column G-align-center'>
 
 
-
-
         <div className='P-upload-img G-flex-column G-justify-center'>
-            {(userInput.userBgImg || userInput.userImg) && <div style={{backgroundImage: `url("${userInput.userBgImg}")`}}
-                  className='P-image-main G-image-cover G-flex G-align-end G-justify-center'>
+            {(userInput.userBgImg || userInput.userImg) &&
+            <div style={{backgroundImage: `url("${userInput.userBgImg}")`}}
+                 className='P-image-main G-image-cover G-flex G-align-end G-justify-center'>
                 {userInput.userImg &&
-                <div style={{backgroundImage: `url("${userInput.userImg}")`}} className='P-image-profile G-image-cover'/>}
+                <div style={{backgroundImage: `url("${userInput.userImg}")`}}
+                     className='P-image-profile G-image-cover'/>}
             </div>}
         </div>
 

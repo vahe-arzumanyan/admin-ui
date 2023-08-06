@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.scss';
-import CustomInput from "../../../components/custom-input";
-
+import CustomInput from "../../../../components/custom-input";
 const FormUserProfile = ({onChange, userInput, userInputError}) => {
 
     const handleChange = (e) => {

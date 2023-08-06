@@ -1,18 +1,17 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './style.scss';
-import {CONNECTION_API} from "../../routers/router";
-import NavBar from "../../components/nav-bar";
-import UserInfo from "./user_info";
-import FormUserProfile from "./form-user-profile";
-import CustomButton from "../../components/custom-button";
+import {CONNECTION_API} from "../../../routers/router";
+import UserInfo from "./print-user-info";
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
-import {addUsersList} from "../../store/reducers/user";
+import {addUsersList} from "../../../store/reducers/user";
+import FormUserProfile from "./form-user-profile";
+import NavBar from "../../../components/nav-bar";
+import CustomButton from "../../../components/custom-button";
 
 
-const UserProfile = () => {
+const AddUserList = ({elementEdit, onClose, name}) => {
 
-    const userList = useSelector(state => state.UsersList.usersList)
     const dispatch = useDispatch();
 
     const [userInput, setUserInput] = useState({
@@ -45,6 +44,12 @@ const UserProfile = () => {
             dispatch(addUsersList(result.data))
         }
     }
+
+    useEffect(() => {
+        if (elementEdit) {
+            setUserInput(elementEdit)
+        }
+    }, [])
 
 
     // ===================== validation checking / start =====================
@@ -127,9 +132,31 @@ const UserProfile = () => {
         }
     }
 
-    const handleAddProfile = async () => {
+    // add user list / start
+
+    // ===================== edit user list function / start =====================
+
+    const editData = async (id) => {
+        const body = userInput
+        delete body._id
+        const result = await axios.put(`${CONNECTION_API}userInput/${id}`, body)
+        if (result) {
+            await getUsersList()
+        }
+    }
+
+    // ===================== edit user list function / end =====================
+
+    const handleAddUser = async () => {
         if (validation()) {
             await postUserInfo()
+            // await getUsersList()
+            if (name === 'editUser') {
+                onClose()
+            }
+            if (elementEdit) {
+                await editData(elementEdit._id)
+            }
         }
     }
 
@@ -157,7 +184,9 @@ const UserProfile = () => {
 
     // ===================== upload image function / end =====================
 
+
     return <>
+
         <NavBar name='User Profile'/>
 
         <div className='P-create-user'>
@@ -167,7 +196,10 @@ const UserProfile = () => {
                 <div className='G-flex-column P-create-user-content'>
                     <p className='P-create-profile-title'>Create Profile</p>
                     <div style={{maxWidth: '400px'}}>
-                        <FormUserProfile onChange={handleChange} userInput={userInput} userInputError={userInputError}/>
+                        <FormUserProfile onChange={handleChange}
+                                         userInput={userInput}
+                                         userInputError={userInputError}
+                        />
                     </div>
 
                     {/* choose image start */}
@@ -178,24 +210,27 @@ const UserProfile = () => {
                                 <input onChange={chooseUserBgImg} type='file'/>
                             </label>
                             <p>{userInputError.errorUserBgImg}</p>
+
                         </div>
 
                         <div className='P-choose-user-img'>
                             <label>upload user image
                                 <input onChange={chooseUserImg} type='file'/>
                             </label>
-                            <p>{userInputError.errorUserBgImg}</p>
+                            <p>{userInputError.errorUserImg}</p>
                         </div>
                     </div>
 
-                    {/*  choose image end  */}
-
                     <div className='G-btn-add-user'>
-                        <CustomButton onClick={handleAddProfile} name={'Add User'} infoClassName={'addUser'}/>
+                        <CustomButton onClick={handleAddUser}
+                                      name={'Add User'}
+                                      infoClassName={'addUser'}
+                        />
                     </div>
 
-
                 </div>
+
+                {/*  choose image end  */}
 
 
                 {/* ================== user info content ================== */}
@@ -205,9 +240,12 @@ const UserProfile = () => {
                 </div>
 
             </div>
+
+
         </div>
+
     </>
 
 };
 
-export default UserProfile;
+export default AddUserList;
