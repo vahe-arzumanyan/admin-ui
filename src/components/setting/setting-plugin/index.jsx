@@ -31,7 +31,7 @@ const PluginStyle = () => {
 
 
     return (
-        <div className='P-hint-box'>
+        <div className={'P-hint-box'}>
             <div style={{padding: '10px'}}>
                 <p style={{margin: '3px 0'}}>SIDEBAR STYLE</p>
                 <div className='G-justify-between'>

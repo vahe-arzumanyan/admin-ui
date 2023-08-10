@@ -1,12 +1,45 @@
 .P-create-user {
   width: 100%;
   height: 100%;
-  margin-top: 50px;
-  position: relative;
+  margin-top: 75px;
+}
+
+
+// edit user content start
+
+.P-edit-user {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+}
+
+.P-bg-edit-modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #847676;
+  opacity: 0.9;
+}
+
+.P-edit-user-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 30px;
+  transform: translate(-50% -50%);
 
 }
+
+// edit user content end
+
 
 .P-user-profile label {
   color: black;
@@ -28,9 +61,12 @@
 .P-create-user-content {
   max-width: 400px;
   width: 100%;
-  border: 1px solid black;
+  max-height: 750px;
+  height: 100%;
+  border: 1px solid #8d8383;
   padding: 30px;
 }
+
 
 .P-user-content {
   max-width: 400px;
@@ -43,30 +79,37 @@
 
 // upload image start
 
+.P-upload-img-content {
+
+  label {
+    font-size: 14px;
+    color: #6a237d;
+    border: 1px solid white;
+    margin: 5px 0 15px 0;
+    padding: 5px 7px;
+    border-radius: 1px;
+    transition: 0.3s;
+    background: rgb(89, 52, 94);
+    background: linear-gradient(90deg, rgba(89, 52, 94, 1) 0%, rgba(193, 0, 240, 1) 0%, rgba(218, 184, 232, 1) 0%);
+
+    &:hover {
+      background: rgb(89, 52, 94);
+      background: linear-gradient(90deg, rgba(89, 52, 94, 1) 0%, rgba(193, 0, 240, 1) 0%, rgba(183, 109, 213, 1) 0%);
+    }
+  }
+}
+
+
 .P-choose-user-img {
   input[type=file] {
     display: none;
 
   }
 
-  label {
-    font-size: 14px;
-    color: rgb(147, 104, 233);
-    font-weight: bold;
-    margin: 5px 0 15px 0;
-    border: 1px solid white;
-    transition: 0.3s;
-  }
-
-  label:hover {
-    color: rgb(107, 27, 239);
-    border-bottom: 1px solid rgb(107, 27, 239);
-  }
-
   p {
     font-size: 14px;
     font-family: "Bodoni MT";
-    color:brown;
+    color: brown;
   }
 }
 
@@ -75,24 +118,10 @@
     display: none;
   }
 
-  label {
-    font-size: 14px;
-    color: rgb(147, 104, 233);
-    font-weight: bold;
-    margin: 5px 0 15px 0;
-    border: 1px solid white;
-    transition: 0.3s;
-  }
-
-  label:hover {
-    color: rgb(107, 27, 239);
-    border-bottom: 1px solid rgb(107, 27, 239);
-  }
-
-  p{
+  p {
     font-size: 14px;
     font-family: "Bodoni MT";
-    color:brown;
+    color: brown;
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 
-const CustomButton = ({onClick, name, infoClassName}) => {
+const CustomButton = ({onClick, onCloseX, name, infoClassName}) => {
 
 
     if (infoClassName === 'addUser') {
@@ -14,9 +14,12 @@ const CustomButton = ({onClick, name, infoClassName}) => {
     if (infoClassName === 'removeList') {
         infoClassName = 'remove'
     }
+    if (infoClassName === 'close') {
+        infoClassName = 'close'
+    }
 
 
-    return <button onClick={onClick} className={infoClassName}>
+    return <button onClick={name === 'Close' ? onCloseX : onClick} className={infoClassName}>
         {name}
     </button>
 

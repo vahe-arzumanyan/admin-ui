@@ -10,7 +10,7 @@ import NavBar from "../../../components/nav-bar";
 import CustomButton from "../../../components/custom-button";
 
 
-const AddUserList = ({elementEdit, onClose, name}) => {
+const AddUserList = ({elementEdit, onCloseX, name}) => {
 
     const dispatch = useDispatch();
 
@@ -50,7 +50,6 @@ const AddUserList = ({elementEdit, onClose, name}) => {
             setUserInput(elementEdit)
         }
     }, [])
-
 
     // ===================== validation checking / start =====================
 
@@ -136,26 +135,25 @@ const AddUserList = ({elementEdit, onClose, name}) => {
 
     // ===================== edit user list function / start =====================
 
-    const editData = async (id) => {
-        const body = userInput
+    const updateProductServer = async (id) => {
+        const body = userInput;
         delete body._id
         const result = await axios.put(`${CONNECTION_API}userInput/${id}`, body)
         if (result) {
             await getUsersList()
+            onCloseX()
         }
     }
 
     // ===================== edit user list function / end =====================
 
+
     const handleAddUser = async () => {
         if (validation()) {
-            await postUserInfo()
-            // await getUsersList()
-            if (name === 'editUser') {
-                onClose()
-            }
             if (elementEdit) {
-                await editData(elementEdit._id)
+                await updateProductServer(elementEdit._id)
+            } else {
+                await postUserInfo()
             }
         }
     }
@@ -187,62 +185,63 @@ const AddUserList = ({elementEdit, onClose, name}) => {
 
     return <>
 
-        <NavBar name='User Profile'/>
+        {name === 'editUser' ? null : <NavBar name='User Profile'/>}
+        <div className={name === 'editUser' ? 'P-bg-edit-modal' : null}></div>
+        <div className={name === 'editUser' ? 'P-edit-user G-justify-center' : 'P-create-user G-justify-center'}>
 
-        <div className='P-create-user'>
-
-            <div className='P-user-profile G-flex'>
-
-                <div className='G-flex-column P-create-user-content'>
-                    <p className='P-create-profile-title'>Create Profile</p>
-                    <div style={{maxWidth: '400px'}}>
-                        <FormUserProfile onChange={handleChange}
-                                         userInput={userInput}
-                                         userInputError={userInputError}
-                        />
-                    </div>
-
-                    {/* choose image start */}
-
-                    <div className='G-flex-column G-align-center'>
-                        <div className='P-choose-img'>
-                            <label>upload background image
-                                <input onChange={chooseUserBgImg} type='file'/>
-                            </label>
-                            <p>{userInputError.errorUserBgImg}</p>
-
-                        </div>
-
-                        <div className='P-choose-user-img'>
-                            <label>upload user image
-                                <input onChange={chooseUserImg} type='file'/>
-                            </label>
-                            <p>{userInputError.errorUserImg}</p>
-                        </div>
-                    </div>
-
-                    <div className='G-btn-add-user'>
-                        <CustomButton onClick={handleAddUser}
-                                      name={'Add User'}
-                                      infoClassName={'addUser'}
-                        />
-                    </div>
-
+            <div
+                className={name === 'editUSer' ? 'G-flex-column P-edit-user-content' : 'G-flex-column P-create-user-content'}>
+                <p className='P-create-profile-title'>Create Profile</p>
+                <div style={{maxWidth: '400px'}}>
+                    <FormUserProfile onChange={handleChange}
+                                     userInput={userInput}
+                                     userInputError={userInputError}
+                    />
                 </div>
 
-                {/*  choose image end  */}
+                {/* choose image start */}
 
+                <div className='G-flex-column G-align-center P-upload-img-content'>
+                    <div className='P-choose-img'>
+                        <label>upload background image
+                            <input onChange={chooseUserBgImg} type='file'/>
+                        </label>
+                        <p>{userInputError.errorUserBgImg}</p>
 
-                {/* ================== user info content ================== */}
+                    </div>
 
-                <div className='P-user-content'>
-                    <UserInfo userInput={userInput}/>
+                    <div className='P-choose-user-img'>
+                        <label>upload user image
+                            <input onChange={chooseUserImg} type='file'/>
+                        </label>
+                        <p>{userInputError.errorUserImg}</p>
+                    </div>
+                </div>
+
+                <div className={name === 'editUser' ? 'G-flex' : 'G-btn-add-user'}>
+                    <CustomButton onClick={handleAddUser}
+                                  name={'Add User'}
+                                  infoClassName={'addUser'}
+                    />
+                    {name === 'editUser' ? <CustomButton onCloseX={onCloseX}
+                                                         name={'Close'}
+                                                         infoClassName={'close'}
+                    /> : null}
                 </div>
 
             </div>
 
+            {/*  choose image end  */}
+
+
+            {/* ================== user info content ================== */}
+
+            <div className='P-user-content'>
+                <UserInfo userInput={userInput}/>
+            </div>
 
         </div>
+
 
     </>
 

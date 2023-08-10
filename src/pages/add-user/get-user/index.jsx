@@ -31,8 +31,9 @@ const GetUsersList = () => {
             <div className='P-user-wrapper G-flex-wrap G-justify-around'>
                 {usersList.length ? usersList.map((elementEdit, index) => {
                     return <ResultUsersList key={index}
-                                         elementEdit={elementEdit}
-                                         name={'editUser'}/>
+                                            elementEdit={elementEdit}
+                                            elementIndex={index}
+                                            name={'editUser'}/>
                 }) : <RotateLoading/>}
 
             </div>

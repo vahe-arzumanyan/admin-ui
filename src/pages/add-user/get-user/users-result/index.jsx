@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './style.scss';
-import EditUserList from "../edit-user-list";
 import RemoveCustomModal from "../../../../components/custom-modal/remove-custom-modal";
 import CustomButton from "../../../../components/custom-button";
 import AddUserList from "../../add-profile";
@@ -46,9 +45,9 @@ const ResultUsersList = ({elementEdit}) => {
 
         {/*  ========================== edit user info ==========================  */}
 
-        {editUserInfo ? <AddUserList onClose={handleEditUserInfo}
-                                         editItem={elementEdit}
-        name={'editUser'}/> : null}
+        {editUserInfo ? <AddUserList onCloseX={handleEditUserInfo}
+                                     elementEdit={elementEdit}
+                                     name={'editUser'}/> : null}
 
         {/*  ========================== remove user list ==========================  */}
 
