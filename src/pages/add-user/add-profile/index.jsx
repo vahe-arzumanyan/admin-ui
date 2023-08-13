@@ -184,64 +184,69 @@ const AddUserList = ({elementEdit, onCloseX, name}) => {
 
 
     return <>
-
         {name === 'editUser' ? null : <NavBar name='User Profile'/>}
-        <div className={name === 'editUser' ? 'P-bg-edit-modal' : null}></div>
-        <div className={name === 'editUser' ? 'P-edit-user G-justify-center' : 'P-create-user G-justify-center'}>
 
-            <div
-                className={name === 'editUSer' ? 'G-flex-column P-edit-user-content' : 'G-flex-column P-create-user-content'}>
-                <p className='P-create-profile-title'>Create Profile</p>
-                <div style={{maxWidth: '400px'}}>
+        <div className='P-user-parent'>
+
+            {/* modal background color */}
+            <div className={name === 'editUser' ? 'P-bg-edit-modal' : null}></div>
+
+            {/* user content */}
+
+            <div className={name === 'editUser' ? 'P-edit-user G-justify-center' : 'P-create-user G-justify-center'}>
+
+                <div
+                    className={name === 'editUSer' ? 'G-flex-column P-edit-user-content' : 'G-flex-column P-create-user-content'}>
+                    <p className='P-create-profile-title'>Create Profile</p>
                     <FormUserProfile onChange={handleChange}
                                      userInput={userInput}
                                      userInputError={userInputError}
                     />
-                </div>
 
-                {/* choose image start */}
+                    {/* choose image start */}
 
-                <div className='G-flex-column G-align-center P-upload-img-content'>
-                    <div className='P-choose-img'>
-                        <label>upload background image
-                            <input onChange={chooseUserBgImg} type='file'/>
-                        </label>
-                        <p>{userInputError.errorUserBgImg}</p>
+                    <div className='G-flex-column G-align-center P-upload-img-content'>
+                        <div className='P-choose-img'>
+                            <label>upload background image
+                                <input onChange={chooseUserBgImg} type='file'/>
+                            </label>
+                            <p>{userInputError.errorUserBgImg}</p>
 
+                        </div>
+
+                        <div className='P-choose-user-img'>
+                            <label>upload user image
+                                <input onChange={chooseUserImg} type='file'/>
+                            </label>
+                            <p>{userInputError.errorUserImg}</p>
+                        </div>
                     </div>
 
-                    <div className='P-choose-user-img'>
-                        <label>upload user image
-                            <input onChange={chooseUserImg} type='file'/>
-                        </label>
-                        <p>{userInputError.errorUserImg}</p>
+                    <div className={name === 'editUser' ? 'G-flex' : 'G-btn-add-user'}
+                         style={{border: '1px solid magenta'}}>
+                        <CustomButton onClick={handleAddUser}
+                                      name={'Add User'}
+                                      infoClassName={'addUser'}
+                        />
+                        {name === 'editUser' ? <CustomButton onCloseX={onCloseX}
+                                                             name={'Close'}
+                                                             infoClassName={'close'}
+                        /> : null}
                     </div>
+
                 </div>
 
-                <div className={name === 'editUser' ? 'G-flex' : 'G-btn-add-user'}>
-                    <CustomButton onClick={handleAddUser}
-                                  name={'Add User'}
-                                  infoClassName={'addUser'}
-                    />
-                    {name === 'editUser' ? <CustomButton onCloseX={onCloseX}
-                                                         name={'Close'}
-                                                         infoClassName={'close'}
-                    /> : null}
-                </div>
+                {/*  choose image end  */}
+
+
+                {/* ================== user info content ================== */}
+
+                {/*<div className='P-user-content'>*/}
+                {/*    <UserInfo userInput={userInput}/>*/}
+                {/*</div>*/}
 
             </div>
-
-            {/*  choose image end  */}
-
-
-            {/* ================== user info content ================== */}
-
-            <div className='P-user-content'>
-                <UserInfo userInput={userInput}/>
-            </div>
-
         </div>
-
 
     </>
 

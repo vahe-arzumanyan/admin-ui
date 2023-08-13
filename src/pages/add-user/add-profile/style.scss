@@ -1,7 +1,9 @@
-.P-create-user {
+.P-user-parent{
   width: 100%;
   height: 100%;
-  margin-top: 75px;
+}
+.P-create-user {
+margin-top: 100px;
 }
 
 
@@ -40,28 +42,19 @@
 
 // edit user content end
 
-
-.P-user-profile label {
-  color: black;
-}
-
 .P-create-profile-title {
-  font-size: 22px;
+  font-size: 25px;
+  color: #9937bd;
   font-family: roboto, helvetica neue, Arial, sans-serif;
-  margin: 15px;
+  margin-bottom: 30px;
 }
 
 // user profile
 
-.P-user-profile {
-  margin-top: 30px;
-  padding: 30px;
-}
 
 .P-create-user-content {
   max-width: 400px;
   width: 100%;
-  max-height: 750px;
   height: 100%;
   border: 1px solid #8d8383;
   padding: 30px;
@@ -80,7 +73,7 @@
 // upload image start
 
 .P-upload-img-content {
-
+  border:1px solid red;
   label {
     font-size: 14px;
     color: #6a237d;
@@ -103,7 +96,6 @@
 .P-choose-user-img {
   input[type=file] {
     display: none;
-
   }
 
   p {
